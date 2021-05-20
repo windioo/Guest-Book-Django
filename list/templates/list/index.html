@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block contents %}
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Email</th>
+      <th scope="col">Alamat</th>
+    </tr>
+  </thead>
+  {% for list in lists %}
+  <tbody>
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ list.nama }}</td>
+      <td>{{ list.email }}</td>
+      <td>{{ list.alamat }}</td>
+    </tr>
+  </tbody>
+  {% endfor%}
+</table>
+{% endblock contents %}

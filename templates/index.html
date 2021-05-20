@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block contents %}
+<div class="border border-dark">
+  <form method="POST" class="m-5">
+    {% csrf_token %}
+    <table style="margin-left: 320px">
+      {{ post_form.as_table }}
+    </table>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-primary mt-5" type="submit">Button</button>
+    </div>
+  </form>
+</div>
+
+{% endblock contents %}
